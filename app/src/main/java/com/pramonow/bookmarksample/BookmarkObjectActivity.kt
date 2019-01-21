@@ -6,9 +6,7 @@ import android.widget.Button
 import android.support.v4.content.LocalBroadcastManager
 import android.content.Intent
 
-
-
-class NewActivty:AppCompatActivity(){
+class BookmarkObjectActivity:AppCompatActivity(){
 
     lateinit var button: Button
 
@@ -16,20 +14,17 @@ class NewActivty:AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bookmark)
 
-        button = findViewById(R.id.button)
+        button = this.findViewById(R.id.button)
 
-        val index = intent.getIntExtra("index",0)
-
-        button.setOnClickListener { sendMessage(index) }
-
+        val id = intent.getIntExtra("id",0)
+        button.setOnClickListener { sendMessage(id) }
     }
 
-    private fun sendMessage(int: Int) {
+    //This will send broadcast to the bookmark activity list and will issue bookmark/unbookmark to them
+    //Sending id
+    private fun sendMessage(id: Int) {
         val intent = Intent("mark")
-        // You can also include some extra data.
+        intent.putExtra("id",id)
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
     }
-
-
-
 }
