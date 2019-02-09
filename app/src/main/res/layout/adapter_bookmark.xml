@@ -16,7 +16,8 @@ android:background="@color/gray">
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
     android:id="@+id/is_bookmarked"
-    android:text="not bookmarked"/>
+    android:text="not bookmarked"
+    android:textStyle="bold"/>
 
     <Button android:layout_width="wrap_content"
             android:layout_height="wrap_content"

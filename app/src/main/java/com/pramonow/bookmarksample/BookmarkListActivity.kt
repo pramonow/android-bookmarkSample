@@ -64,9 +64,10 @@ class BookmarkListActivity : AppCompatActivity(), ClickInterface {
     }
 
     //Click interface that will be used to navigate for the adapter
-    override fun onClick(id:Int) {
+    override fun onClick(id:Int, bookmarked:Boolean) {
         val intent = Intent(this, BookmarkObjectActivity::class.java)
         intent.putExtra("id", id)
+        intent.putExtra("bookmarked", bookmarked)
         startActivity(intent)
     }
 

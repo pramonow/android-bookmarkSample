@@ -1,5 +1,5 @@
 package com.pramonow.bookmarksample
 
 interface ClickInterface{
-    fun onClick(id:Int)
+    fun onClick(id:Int, bookmarked:Boolean)
 }

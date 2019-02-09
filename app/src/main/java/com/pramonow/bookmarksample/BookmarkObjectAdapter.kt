@@ -57,7 +57,7 @@ class BookmarkObjectAdapter : RecyclerView.Adapter<BookmarkObjectAdapter.Bookmar
             }
 
             //Set callback here to pass id data to our activity
-            itemView.setOnClickListener { clickInterface.onClick(bookmarkObject.id) }
+            itemView.setOnClickListener { clickInterface.onClick(bookmarkObject.id, bookmarkObject.bookmark) }
         }
     }
 }
